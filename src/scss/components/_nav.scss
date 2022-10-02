@@ -1,2 +1,16 @@
 .nav {
+	&__list {
+		display: flex;
+		margin-right: 25px;
+	}
+	&__item {
+		&:not(:last-child) {
+			margin-right: 43px;
+		}
+	}
+	&__link {
+		font-size: 14px;
+		line-height: 19px;
+		color: var(--dark-grey-color);
+	}
 }

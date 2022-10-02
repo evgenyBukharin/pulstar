@@ -1,0 +1,47 @@
+.header {
+	padding: 20px 0;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__logo {
+		height: 24px;
+		width: 80px;
+	}
+	&__side {
+		&-right {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__btn {
+		background: var(--grey-color);
+		border-radius: 3px;
+		padding: 14px 23px 12px 18px;
+		font-size: 12px;
+		line-height: 16px;
+		color: var(--dark-grey-color);
+		margin-right: 12px;
+	}
+	&__basket {
+		background: var(--dark-white-color);
+		border-radius: 3px;
+		display: flex;
+		align-items: center;
+		padding: 12px;
+	}
+	&__icon {
+		&-basket {
+			margin-right: 10px;
+		}
+	}
+	&__counter {
+		padding: 0 6px;
+		background: var(--dark-grey-color);
+		border-radius: 100%;
+		font-size: 11px;
+		line-height: 18px;
+		color: var(--dark-white-color);
+	}
+}
