@@ -3,7 +3,7 @@
 
 // Определение операционной системы на мобильных
 import { mobileCheck } from "./functions/mobile-check";
-console.log(mobileCheck())
+console.log(mobileCheck());
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -50,11 +50,26 @@ console.log(mobileCheck())
 // });
 
 // Подключение свайпера
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// Swiper.use([Navigation, Pagination]);
-// const swiper = new Swiper(el, {
-//   slidesPerView: 'auto',
-// });
+import Swiper, { Pagination, Autoplay } from "swiper";
+Swiper.use([Pagination, Autoplay]);
+const swiper = new Swiper(".swiper", {
+	speed: 600,
+	slideClass: "swiper-slide",
+	grabCursor: true,
+	pagination: {
+		el: ".swiper-pagination",
+		type: "bullets",
+		clickable: true,
+		bulletClass: "hero__bullet",
+		bulletActiveClass: "hero__bullet-active",
+		renderBullet: () => {
+			return '<li class="hero__bullet"></li>';
+		},
+	},
+	autoplay: {
+		delay: 5000,
+	},
+});
 
 // Подключение анимаций по скроллу
 // import AOS from 'aos';
